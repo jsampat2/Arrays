@@ -1,0 +1,32 @@
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        
+        int i=0,j,k;
+        //int* out = nums[i];
+        
+        if(nums.size() == 0)
+        {
+            return 0;
+        }
+        
+        for(j = 1; j < nums.size(); j++)
+        {
+            if(nums[i] != nums[j])
+            {
+                i = i +1;
+                nums[i] = nums[j];
+                //cout<<nums[i]<<'\n';
+            }
+            
+        }
+        i = i+1;
+        cout<<i;
+        
+                
+        return i;
+        
+        
+        
+    }
+};
